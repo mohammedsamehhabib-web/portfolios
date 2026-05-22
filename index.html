@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Sameh Habib — Operations Manager</title>
+<meta name="description" content="Operations Manager · 11 Years · BPO & Contact Center Leadership · Egypt, KSA, UAE · PMP® · Lean Six Sigma Green Belt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════
+   RESET & TOKENS
+══════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:       #0D0D0D;
+  --bg2:      #111111;
+  --bg3:      #161616;
+  --border:   #1E1E1E;
+  --border2:  #262626;
+  --text:     #EDEDED;
+  --text2:    #8A8A8A;
+  --text3:    #404040;
+  --accent:   #00C9B1;
+  --accent-d: rgba(0,201,177,.08);
+  --accent-g: rgba(0,201,177,.18);
+  --accent-b: rgba(0,201,177,.22);
+  --fd: 'Syne', sans-serif;
+  --fb: 'DM Sans', sans-serif;
+  --pad: max(32px, 6vw);
+  --r: 6px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--accent-d);color:var(--accent)}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#2a2a2a;border-radius:3px}
+
+/* ══════════════════════════════════════════════
+   TYPOGRAPHY & LAYOUT
+══════════════════════════════════════════════ */
+h1,h2,h3{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacing:-.03em}
+section{padding:108px var(--pad)}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* ── Section Label ── */
+.sec-row{display:flex;align-items:center;gap:16px;margin-bottom:64px;flex-wrap:wrap}
+.sec-num{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.2em;white-space:nowrap}
+.sec-line{flex:0 0 44px;height:1px;background:var(--accent);opacity:.6}
+.sec-title{font-family:var(--fd);font-size:clamp(26px,3.2vw,40px);font-weight:800;color:var(--text);letter-spacing:-.03em}
+.sec-title .a{color:var(--accent)}
+
+/* ══════════════════════════════════════════════
+   NAV
+══════════════════════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:66px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 var(--pad);
+  background:rgba(13,13,13,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);transition:box-shadow .3s
+}
+nav.scrolled{box-shadow:0 4px 40px rgba(0,0,0,.55)}
+.nav-logo{font-family:var(--fd);font-weight:800;font-size:19px;letter-spacing:-.04em;color:var(--text)}
+.nav-logo em{color:var(--accent);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:12px;font-weight:500;color:var(--text2);letter-spacing:.07em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-cv{padding:8px 18px;border:1px solid var(--accent-b);border-radius:var(--r);font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;transition:all .2s;white-space:nowrap}
+.nav-cv:hover{background:var(--accent-d)}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--text);transition:all .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-drawer{
+  display:none;position:fixed;top:66px;left:0;right:0;z-index:999;
+  background:rgba(13,13,13,.97);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);padding:28px var(--pad);
+  flex-direction:column;gap:0
+}
+.nav-drawer.open{display:flex}
+.nav-drawer a{font-size:14px;font-weight:500;color:var(--text2);letter-spacing:.06em;text-transform:uppercase;padding:16px 0;border-bottom:1px solid var(--border);transition:color .2s}
+.nav-drawer a:hover{color:var(--accent)}
+
+/* ══════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════ */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  padding:130px var(--pad) 90px;overflow:hidden
+}
+/* grid texture */
+.hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(0,201,177,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,201,177,.025) 1px,transparent 1px);
+  background-size:72px 72px
+}
+/* radial glow top-right */
+.hero::after{
+  content:'';position:absolute;top:-25%;right:-15%;
+  width:min(750px,75vw);height:min(750px,75vw);
+  background:radial-gradient(circle,rgba(0,201,177,.065) 0%,transparent 65%);
+  pointer-events:none
+}
+.hero-inner{position:relative;z-index:1;max-width:860px}
+.hero-overline{
+  display:inline-flex;align-items:center;gap:14px;
+  font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:30px
+}
+.hero-overline::before{content:'';width:36px;height:1px;background:var(--accent)}
+h1.hero-name{
+  font-family:var(--fd);font-weight:800;
+  font-size:clamp(54px,9.5vw,128px);
+  color:var(--text);line-height:.92;letter-spacing:-.04em;margin-bottom:28px
+}
+.hero-subtitle{
+  font-size:clamp(12px,1.35vw,15px);color:var(--text2);
+  font-weight:400;letter-spacing:.03em;margin-bottom:26px;
+  max-width:620px;line-height:1.75
+}
+.hero-tagline{
+  font-family:var(--fd);font-size:clamp(15px,1.9vw,21px);font-weight:600;
+  font-style:italic;color:var(--text);
+  border-left:3px solid var(--accent);padding-left:22px;
+  margin-bottom:48px;max-width:580px;line-height:1.45
+}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:54px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 30px;border-radius:var(--r);
+  font-family:var(--fb);font-size:12.5px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;transition:all .25s;cursor:pointer
+}
+.btn-solid{background:var(--accent);color:#0D0D0D;border:1px solid var(--accent)}
+.btn-solid:hover{background:transparent;color:var(--accent);box-shadow:0 0 28px var(--accent-g)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--accent-b);color:var(--accent)}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-size:12.5px;color:var(--text2)}
+.hero-meta a{color:var(--accent);transition:opacity .2s}
+.hero-meta a:hover{opacity:.7}
+.hero-sep{color:var(--text3)}
+/* decorative initials */
+.hero-deco{
+  position:absolute;right:0;top:50%;transform:translateY(-52%);
+  font-family:var(--fd);font-weight:800;
+  font-size:min(28vw,400px);
+  color:rgba(0,201,177,.04);letter-spacing:-.05em;line-height:1;
+  pointer-events:none;user-select:none;z-index:0;white-space:nowrap
+}
+/* scroll cue */
+.hero-scroll{
+  position:absolute;bottom:44px;left:var(--pad);
+  display:flex;flex-direction:column;align-items:center;gap:9px;
+  font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--text3);z-index:1
+}
+.hero-scroll-line{
+  width:1px;height:52px;
+  background:linear-gradient(to bottom,var(--accent),transparent);
+  animation:scrl 2.2s ease-in-out infinite
+}
+@keyframes scrl{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:.35;transform:scaleY(.55)}}
+
+/* ══════════════════════════════════════════════
+   ABOUT
+══════════════════════════════════════════════ */
+.about{background:var(--bg2);border-top:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.about-left .sec-row{margin-bottom:28px}
+.about-h2{font-family:var(--fd);font-size:clamp(36px,5vw,58px);font-weight:800;letter-spacing:-.04em;color:var(--text);margin-bottom:32px;line-height:1}
+.about-h2 .a{color:var(--accent)}
+.cred-list{display:flex;flex-direction:column;gap:12px}
+.cred{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--r);
+  transition:border-color .25s
+}
+.cred:hover{border-color:var(--accent-b)}
+.cred-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.cred-text{font-size:13px;font-weight:500;color:var(--text2)}
+.about-text p{font-size:16px;line-height:1.82;color:var(--text2);margin-bottom:20px}
+.about-text p:first-child{color:var(--text);font-size:18px;font-weight:500;line-height:1.72}
+.about-text strong{color:var(--text);font-weight:600}
+.cert-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.cert-tag{
+  padding:6px 14px;background:var(--accent-d);border:1px solid var(--accent-b);
+  border-radius:40px;font-size:11.5px;color:var(--accent);font-weight:600;letter-spacing:.04em
+}
+
+/* ══════════════════════════════════════════════
+   METRICS
+══════════════════════════════════════════════ */
+.metrics{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px var(--pad)}
+.metrics-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden
+}
+.metric-item{
+  background:var(--bg);padding:52px 28px;text-align:center;
+  transition:background .3s;position:relative;overflow:hidden
+}
+.metric-item::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 100%,rgba(0,201,177,.05) 0%,transparent 70%);
+  opacity:0;transition:opacity .3s
+}
+.metric-item:hover{background:var(--bg3)}
+.metric-item:hover::before{opacity:1}
+.metric-num{
+  font-family:var(--fd);font-weight:800;
+  font-size:clamp(44px,5.5vw,76px);letter-spacing:-.04em;
+  color:var(--accent);line-height:1;
+  display:flex;align-items:baseline;justify-content:center;gap:3px;
+  margin-bottom:14px
+}
+.metric-plus{font-size:clamp(28px,3.5vw,48px)}
+.metric-label{
+  font-size:11px;font-weight:600;color:var(--text2);
+  text-transform:uppercase;letter-spacing:.13em;line-height:1.6
+}
+
+/* ══════════════════════════════════════════════
+   COMPETENCIES
+══════════════════════════════════════════════ */
+.competencies{background:var(--bg2);border-top:1px solid var(--border)}
+.skills-cloud{display:flex;flex-wrap:wrap;gap:11px}
+.s-tag{
+  padding:9px 20px;border:1px solid var(--border2);border-radius:40px;
+  font-size:13px;color:var(--text2);font-weight:500;
+  transition:all .22s;cursor:default
+}
+.s-tag:hover{border-color:var(--accent-b);color:var(--accent);background:var(--accent-d)}
+
+/* ══════════════════════════════════════════════
+   EXPERIENCE — TIMELINE
+══════════════════════════════════════════════ */
+.experience{background:var(--bg);border-top:1px solid var(--border)}
+.timeline{position:relative;padding-left:40px}
+.timeline::before{
+  content:'';position:absolute;left:0;top:6px;bottom:48px;width:1px;
+  background:linear-gradient(to bottom,var(--accent) 0%,rgba(0,201,177,.06) 100%)
+}
+.tl-item{
+  position:relative;margin-bottom:60px;
+  opacity:0;transform:translateX(-22px);
+  transition:opacity .65s ease,transform .65s ease
+}
+.tl-item.visible{opacity:1;transform:none}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{
+  position:absolute;left:-44px;top:7px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent);
+  box-shadow:0 0 0 4px rgba(0,201,177,.1);
+  transition:all .3s
+}
+.tl-item:hover .tl-dot{background:var(--accent);box-shadow:0 0 16px var(--accent-g)}
+.tl-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:10px 20px;margin-bottom:6px}
+.tl-company{font-family:var(--fd);font-size:clamp(20px,2.4vw,26px);font-weight:800;color:var(--text);letter-spacing:-.02em}
+.tl-company-sub{font-weight:600;font-size:.72em;color:var(--text2);margin-left:6px}
+.tl-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:2px}
+.tl-date{
+  padding:4px 10px;background:var(--accent-d);border:1px solid var(--accent-b);
+  border-radius:4px;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.06em;white-space:nowrap
+}
+.tl-loc{font-size:12px;color:var(--text3)}
+.tl-role{font-size:13.5px;font-weight:500;color:var(--accent);margin-bottom:16px;letter-spacing:.015em}
+.tl-ul{display:flex;flex-direction:column;gap:9px}
+.tl-ul li{
+  font-size:14px;color:var(--text2);line-height:1.7;
+  padding-left:18px;position:relative
+}
+.tl-ul li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--accent)}
+
+/* ══════════════════════════════════════════════
+   TECHNICAL SKILLS
+══════════════════════════════════════════════ */
+.techskills{background:var(--bg2);border-top:1px solid var(--border)}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.tech-card{
+  background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:26px;
+  transition:border-color .25s,transform .25s
+}
+.tech-card:hover{border-color:var(--accent-b);transform:translateY(-2px)}
+.tech-cat{
+  font-family:var(--fd);font-size:10.5px;font-weight:700;color:var(--accent);
+  letter-spacing:.16em;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;margin-bottom:18px
+}
+.tech-cat::after{content:'';flex:1;height:1px;background:var(--border2)}
+.tech-items{display:flex;flex-wrap:wrap;gap:8px}
+.tech-item{
+  font-size:12px;color:var(--text2);font-weight:500;
+  padding:5px 12px;background:var(--bg3);border-radius:4px;border:1px solid var(--border)
+}
+
+/* ══════════════════════════════════════════════
+   EDUCATION & CERTIFICATIONS
+══════════════════════════════════════════════ */
+.education{background:var(--bg);border-top:1px solid var(--border)}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:40px}
+.edu-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:28px;
+  display:flex;flex-direction:column;gap:7px;transition:border-color .25s
+}
+.edu-card:hover{border-color:var(--accent-b)}
+.edu-type{font-size:10px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.edu-title{font-family:var(--fd);font-size:clamp(15px,1.9vw,20px);font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1.3}
+.edu-inst{font-size:13px;color:var(--text2);font-weight:400}
+.edu-year{font-size:12px;color:var(--text3);margin-top:auto;padding-top:14px}
+.lang-row{display:flex;flex-wrap:wrap;gap:16px}
+.lang-card{
+  flex:1;min-width:180px;padding:22px 26px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:8px;
+  display:flex;flex-direction:column;gap:5px;transition:border-color .25s
+}
+.lang-card:hover{border-color:var(--accent-b)}
+.lang-name{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--text)}
+.lang-level{font-size:12px;color:var(--text2);font-weight:500}
+
+/* ══════════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════════ */
+.contact{background:var(--bg2);border-top:1px solid var(--border);text-align:center}
+.contact-h{
+  font-family:var(--fd);font-size:clamp(38px,7vw,88px);font-weight:800;
+  letter-spacing:-.04em;color:var(--text);margin-bottom:16px;line-height:.96
+}
+.contact-h .a{color:var(--accent)}
+.contact-sub{font-size:16px;color:var(--text2);margin-bottom:52px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7}
+.contact-btns{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:60px}
+.contact-info{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:14px 40px;
+  padding-top:44px;border-top:1px solid var(--border);
+  font-size:13.5px;color:var(--text2)
+}
+.ci{display:flex;align-items:center;gap:11px}
+.ci-icon{
+  width:34px;height:34px;border-radius:6px;
+  background:var(--accent-d);border:1px solid var(--accent-b);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;color:var(--accent)
+}
+.ci a{color:var(--accent);transition:opacity .2s}
+.ci a:hover{opacity:.7}
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
+footer{
+  background:var(--bg);border-top:1px solid var(--border);
+  padding:28px var(--pad);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px
+}
+.f-name{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--text)}
+.f-name em{color:var(--accent);font-style:normal}
+.f-copy{font-size:11.5px;color:var(--text3)}
+
+/* ══════════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════════ */
+.fade-in{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}
+.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.d5{transition-delay:.5s}.d6{transition-delay:.6s}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media(max-width:1024px){
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .metrics-grid{grid-template-columns:repeat(2,1fr)}
+  .edu-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  :root{--pad:24px}
+  section{padding:76px var(--pad)}
+  .nav-links,.nav-cv{display:none}
+  .nav-burger{display:flex}
+  h1.hero-name{font-size:clamp(46px,14vw,82px)}
+  .hero-deco{font-size:32vw;opacity:.7}
+  .metrics-grid{grid-template-columns:repeat(2,1fr)}
+  .metric-item{padding:36px 20px}
+  .timeline{padding-left:26px}
+  .tl-dot{left:-29px}
+  .tech-grid{grid-template-columns:1fr}
+  .edu-grid{grid-template-columns:1fr}
+  .sec-row{margin-bottom:44px}
+}
+@media(max-width:500px){
+  h1.hero-name{font-size:clamp(38px,16vw,70px)}
+  .metrics-grid{grid-template-columns:1fr 1fr}
+  .metric-item{padding:28px 14px}
+  .hero-btns .btn{flex:1;justify-content:center}
+  .tl-top{flex-direction:column;gap:8px}
+  .contact-h{font-size:clamp(34px,11vw,56px)}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════ NAV ══════ -->
+<nav id="nav">
+  <div class="nav-logo">MSH<em>.</em></div>
+  <div class="nav-links">
+    <a href="#about"      data-sec="about">About</a>
+    <a href="#experience" data-sec="experience">Experience</a>
+    <a href="#skills"     data-sec="skills">Skills</a>
+    <a href="#education"  data-sec="education">Education</a>
+    <a href="#contact"    data-sec="contact">Contact</a>
+  </div>
+  <a href="#" class="nav-cv">Download CV</a>
+  <button class="nav-burger" id="burger" aria-label="Menu" onclick="toggleDrawer()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-drawer" id="drawer">
+  <a href="#about"      onclick="closeDrawer()">About</a>
+  <a href="#experience" onclick="closeDrawer()">Experience</a>
+  <a href="#skills"     onclick="closeDrawer()">Skills</a>
+  <a href="#education"  onclick="closeDrawer()">Education</a>
+  <a href="#contact"    onclick="closeDrawer()">Contact</a>
+  <a href="#"           onclick="closeDrawer()" style="border-bottom:none">Download CV</a>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-overline">Operations Manager &nbsp;·&nbsp; BPO &nbsp;·&nbsp; Contact Center Leadership</div>
+    <h1 class="hero-name">Mohammed<br>Sameh<br>Habib</h1>
+    <div class="hero-subtitle">Operations Management &nbsp;·&nbsp; BPO &amp; Contact Center Leadership &nbsp;·&nbsp; B2B &amp; B2C Client Operations</div>
+    <p class="hero-tagline">"Turning contact center chaos into scalable, SLA-compliant operations."</p>
+    <div class="hero-btns">
+      <a href="#experience" class="btn btn-solid">View My Work &darr;</a>
+      <a href="#" class="btn btn-ghost">Download CV</a>
+    </div>
+    <div class="hero-meta">
+      <span>mohammedsameh.habib@gmail.com</span>
+      <span class="hero-sep">·</span>
+      <span>+20&nbsp;100&nbsp;007&nbsp;4289</span>
+      <span class="hero-sep">·</span>
+      <span>Cairo,&nbsp;Egypt</span>
+      <span class="hero-sep">·</span>
+      <a href="https://linkedin.com/in/mohammedsamehhabib" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="hero-deco" aria-hidden="true">MSH</div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══════ ABOUT ══════ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+
+      <div class="about-left">
+        <div class="sec-row fade-in">
+          <span class="sec-num">01</span>
+          <div class="sec-line"></div>
+        </div>
+        <h2 class="about-h2 fade-in d1">About<br><span class="a">Me</span></h2>
+        <div class="cred-list fade-in d2">
+          <div class="cred"><div class="cred-dot"></div><span class="cred-text">PMP® — Project Management Professional</span></div>
+          <div class="cred"><div class="cred-dot"></div><span class="cred-text">Lean Six Sigma Green Belt</span></div>
+          <div class="cred"><div class="cred-dot"></div><span class="cred-text">11 Years Operations Experience</span></div>
+          <div class="cred"><div class="cred-dot"></div><span class="cred-text">Egypt · KSA · UAE</span></div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p class="fade-in">Operations Manager with <strong>11 years of experience</strong> leading BPO and contact center teams across <strong>Egypt, KSA, and UAE</strong>. Proven record scaling teams from 8 to 120+ agents in under 10 months — managing 2,000+ B2B partner accounts monthly with full SLA compliance across phone, live chat, and email.</p>
+        <p class="fade-in d1">PMP® certified and Lean Six Sigma Green Belt, with a consistent track record of <strong>reducing attrition</strong>, improving CSAT, cutting AHT, optimizing FCR, and converting escalations into growth opportunities.</p>
+        <p class="fade-in d2">My approach combines data-forward performance management with hands-on team development — building operations infrastructure from the ground up when needed, and optimizing established teams when the foundation is already in place.</p>
+        <div class="cert-tags fade-in d3">
+          <span class="cert-tag">PMP®</span>
+          <span class="cert-tag">Lean Six Sigma Green Belt</span>
+          <span class="cert-tag">B2B Operations</span>
+          <span class="cert-tag">BPO Governance</span>
+          <span class="cert-tag">SLA Management</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ METRICS ══════ -->
+<section class="metrics" id="metrics">
+  <div class="wrap">
+    <div class="metrics-grid">
+      <div class="metric-item fade-in">
+        <div class="metric-num"><span class="counter" data-target="11">0</span><span class="metric-plus">+</span></div>
+        <div class="metric-label">Years of<br>Experience</div>
+      </div>
+      <div class="metric-item fade-in d1">
+        <div class="metric-num"><span class="counter" data-target="2000">0</span><span class="metric-plus">+</span></div>
+        <div class="metric-label">B2B Partners<br>Managed Monthly</div>
+      </div>
+      <div class="metric-item fade-in d2">
+        <div class="metric-num"><span class="counter" data-target="120">0</span><span class="metric-plus">+</span></div>
+        <div class="metric-label">Agents Scaled in<br>Under 10 Months</div>
+      </div>
+      <div class="metric-item fade-in d3">
+        <div class="metric-num"><span class="counter" data-target="3">0</span></div>
+        <div class="metric-label">Countries<br>Operated Across</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ COMPETENCIES ══════ -->
+<section class="competencies" id="competencies">
+  <div class="wrap">
+    <div class="sec-row fade-in">
+      <span class="sec-num">02</span>
+      <div class="sec-line"></div>
+      <h2 class="sec-title">Core <span class="a">Competencies</span></h2>
+    </div>
+    <div class="skills-cloud">
+      <span class="s-tag fade-in">BPO Operations Management</span>
+      <span class="s-tag fade-in d1">SLA &amp; KPI Design</span>
+      <span class="s-tag fade-in d2">Escalation Handling</span>
+      <span class="s-tag fade-in d3">Team Leader Development &amp; Coaching</span>
+      <span class="s-tag fade-in d4">WFM Collaboration &amp; Capacity Planning</span>
+      <span class="s-tag fade-in">QA &amp; Call Monitoring</span>
+      <span class="s-tag fade-in d1">Client Relationship Management</span>
+      <span class="s-tag fade-in d2">Omnichannel Operations</span>
+      <span class="s-tag fade-in d3">Performance Reporting</span>
+      <span class="s-tag fade-in d4">Vendor &amp; BPO Governance</span>
+      <span class="s-tag fade-in">FCR &amp; AHT Optimization</span>
+      <span class="s-tag fade-in d1">Lean Six Sigma / Process Improvement</span>
+      <span class="s-tag fade-in d2">Workforce Planning &amp; Scheduling</span>
+      <span class="s-tag fade-in d3">Business Reviews &amp; Stakeholder Management</span>
+      <span class="s-tag fade-in d4">SOP Design &amp; BPMN Mapping</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ EXPERIENCE ══════ -->
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="sec-row fade-in">
+      <span class="sec-num">03</span>
+      <div class="sec-line"></div>
+      <h2 class="sec-title">Work <span class="a">Experience</span></h2>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Tabby -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-top">
+          <div>
+            <div class="tl-company">Tabby</div>
+            <div class="tl-role">Partner Experience Lead, B2B Contact Center Operations</div>
+          </div>
+          <div class="tl-meta">
+            <span class="tl-date">May 2024 – Present</span>
+            <span class="tl-loc">KSA &amp; UAE</span>
+          </div>
+        </div>
+        <ul class="tl-ul">
+          <li>Oversaw day-to-day contact center operations for a team managing 2,000+ B2B partners per month across KSA and UAE</li>
+          <li>Built and launched a proactive monitoring unit (SWAT) to intervene on at-risk partner accounts — directly lifting CSAT and reducing partner churn</li>
+          <li>Redesigned escalation workflows and introduced real-time dashboards, improving FCR and reducing AHT across the team</li>
+          <li>Conducted regular business reviews with Account Management and Product teams, aligning on partner health metrics and strategic priorities</li>
+          <li>Cross-functional collaboration with WFM, QA, Training, and IT to ensure consistent operational standards</li>
+        </ul>
+      </div>
+
+      <!-- Nagwa -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-top">
+          <div>
+            <div class="tl-company">Nagwa</div>
+            <div class="tl-role">Sales &amp; Vendor Management Lead, Contact Center Operations</div>
+          </div>
+          <div class="tl-meta">
+            <span class="tl-date">Jun 2023 – Apr 2024</span>
+            <span class="tl-loc">Egypt · KSA · India</span>
+          </div>
+        </div>
+        <ul class="tl-ul">
+          <li>Built the entire contact center from the ground up — scaled headcount from 8 to 120+ agents in under 10 months</li>
+          <li>Authored all onboarding SOPs, QA scoring frameworks, and escalation protocols from scratch</li>
+          <li>Led structured coaching programs across Egypt, KSA, and India; doubled daily revenue within the year</li>
+          <li>Negotiated and enforced SLAs with third-party BPO vendors across three markets</li>
+        </ul>
+      </div>
+
+      <!-- Majorel -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-top">
+          <div>
+            <div class="tl-company">Majorel</div>
+            <div class="tl-role">Operations Team Lead, B2B Contact Center (BPO)</div>
+          </div>
+          <div class="tl-meta">
+            <span class="tl-date">Jan 2023 – May 2023</span>
+            <span class="tl-loc">Egypt</span>
+          </div>
+        </div>
+        <ul class="tl-ul">
+          <li>Led B2B operations for enterprise clients including Mantrac, What3Words, and Lenovo</li>
+          <li>Reduced error rates through structured audit cycles and targeted retraining programs</li>
+          <li>Improved FCR and compliance metrics across all client accounts</li>
+        </ul>
+      </div>
+
+      <!-- Talabat -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-top">
+          <div>
+            <div class="tl-company">Talabat</div>
+            <div class="tl-role">Restaurant Operations Specialist, B2B Partner Support</div>
+          </div>
+          <div class="tl-meta">
+            <span class="tl-date">May 2022 – Dec 2022</span>
+            <span class="tl-loc">Egypt</span>
+          </div>
+        </div>
+        <ul class="tl-ul">
+          <li>Managed full B2B merchant lifecycle: onboarding, troubleshooting, and performance coaching</li>
+          <li>Reduced repeat contacts and escalations through structured feedback loops and SOP enforcement</li>
+        </ul>
+      </div>
+
+      <!-- Elmenus -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-top">
+          <div>
+            <div class="tl-company">Elmenus</div>
+            <div class="tl-role">Customer Support Specialist, B2C</div>
+          </div>
+          <div class="tl-meta">
+            <span class="tl-date">May 2021 – Apr 2022</span>
+            <span class="tl-loc">Egypt</span>
+          </div>
+        </div>
+        <ul class="tl-ul">
+          <li>Managed high-volume B2C support across live chat, phone, and email channels</li>
+          <li>Promoted to manage public-facing social media support; maintained 100% response rate on visible complaints</li>
+        </ul>
+      </div>
+
+      <!-- Genena -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-top">
+          <div>
+            <div class="tl-company">Genena Group <span class="tl-company-sub">· Tseppas Brand</span></div>
+            <div class="tl-role">E-Commerce Operations Specialist</div>
+          </div>
+          <div class="tl-meta">
+            <span class="tl-date">May 2020 – Apr 2021</span>
+            <span class="tl-loc">Egypt</span>
+          </div>
+        </div>
+        <ul class="tl-ul">
+          <li>Led brand launch across four delivery platforms, building all operational infrastructure from scratch</li>
+          <li>Built the Complaints Management and Social Media Moderation teams from the ground up</li>
+        </ul>
+      </div>
+
+      <!-- Global Housing -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-top">
+          <div>
+            <div class="tl-company">Global Housing Corp</div>
+            <div class="tl-role">Senior Client Relations Specialist, B2B</div>
+          </div>
+          <div class="tl-meta">
+            <span class="tl-date">Jan 2016 – Mar 2019</span>
+            <span class="tl-loc">Egypt</span>
+          </div>
+        </div>
+        <ul class="tl-ul">
+          <li>Managed B2B client accounts for U.S. convention centre partners</li>
+          <li>Promoted from Specialist to Senior in under 12 months based on performance metrics</li>
+        </ul>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+<!-- ══════ TECHNICAL SKILLS ══════ -->
+<section class="techskills" id="skills">
+  <div class="wrap">
+    <div class="sec-row fade-in">
+      <span class="sec-num">04</span>
+      <div class="sec-line"></div>
+      <h2 class="sec-title">Technical <span class="a">Skills</span></h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card fade-in">
+        <div class="tech-cat">Contact Center &amp; CRM</div>
+        <div class="tech-items">
+          <span class="tech-item">Zendesk</span>
+          <span class="tech-item">Salesforce</span>
+          <span class="tech-item">Genesys</span>
+          <span class="tech-item">Pipedrive</span>
+        </div>
+      </div>
+      <div class="tech-card fade-in d1">
+        <div class="tech-cat">Reporting &amp; BI</div>
+        <div class="tech-items">
+          <span class="tech-item">Power BI</span>
+          <span class="tech-item">Tableau</span>
+          <span class="tech-item">Looker Studio</span>
+          <span class="tech-item">KPI Dashboards</span>
+          <span class="tech-item">OKR Tracking</span>
+        </div>
+      </div>
+      <div class="tech-card fade-in d2">
+        <div class="tech-cat">Data &amp; Automation</div>
+        <div class="tech-items">
+          <span class="tech-item">SQL</span>
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Google Apps Script</span>
+        </div>
+      </div>
+      <div class="tech-card fade-in d3">
+        <div class="tech-cat">WFM &amp; Capacity Planning</div>
+        <div class="tech-items">
+          <span class="tech-item">Demand Forecasting</span>
+          <span class="tech-item">Staffing Models</span>
+          <span class="tech-item">Scheduling</span>
+          <span class="tech-item">Cost-per-Contact</span>
+        </div>
+      </div>
+      <div class="tech-card fade-in d1">
+        <div class="tech-cat">Productivity</div>
+        <div class="tech-items">
+          <span class="tech-item">Advanced Excel</span>
+          <span class="tech-item">Google Sheets</span>
+          <span class="tech-item">Power Query</span>
+          <span class="tech-item">Pivot Tables</span>
+          <span class="tech-item">Jira</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ EDUCATION ══════ -->
+<section class="education" id="education">
+  <div class="wrap">
+    <div class="sec-row fade-in">
+      <span class="sec-num">05</span>
+      <div class="sec-line"></div>
+      <h2 class="sec-title">Education &amp; <span class="a">Certifications</span></h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card fade-in">
+        <div class="edu-type">Degree</div>
+        <div class="edu-title">Bachelor of Law</div>
+        <div class="edu-inst">Ain Shams University, Cairo</div>
+        <div class="edu-year">2017</div>
+      </div>
+      <div class="edu-card fade-in d1">
+        <div class="edu-type">Certification</div>
+        <div class="edu-title">PMP® — Project Management Professional</div>
+        <div class="edu-inst">Project Management Institute (PMI)</div>
+        <div class="edu-year">Active</div>
+      </div>
+      <div class="edu-card fade-in d2">
+        <div class="edu-type">Certification</div>
+        <div class="edu-title">Lean Six Sigma Green Belt</div>
+        <div class="edu-inst">The Excellence Center, Cairo</div>
+        <div class="edu-year">Active</div>
+      </div>
+      <div class="edu-card fade-in d3">
+        <div class="edu-type">Diploma</div>
+        <div class="edu-title">Data Analysis Diploma</div>
+        <div class="edu-inst">Tech Mind Academy, Cairo</div>
+        <div class="edu-year">Completed</div>
+      </div>
+    </div>
+    <div class="lang-row">
+      <div class="lang-card fade-in">
+        <div class="lang-name">Arabic</div>
+        <div class="lang-level">Native Speaker</div>
+      </div>
+      <div class="lang-card fade-in d1">
+        <div class="lang-name">English</div>
+        <div class="lang-level">Professional Working Proficiency</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CONTACT ══════ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="contact-h fade-in">Let's<br><span class="a">Connect</span></h2>
+    <p class="contact-sub fade-in d1">Open to senior operations leadership roles in BPO, contact center, or B2B partner operations.</p>
+    <div class="contact-btns fade-in d2">
+      <a href="mailto:mohammedsameh.habib@gmail.com" class="btn btn-solid">Send Email &rarr;</a>
+      <a href="https://linkedin.com/in/mohammedsamehhabib" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn &nearr;</a>
+      <a href="#" class="btn btn-ghost">Download CV</a>
+    </div>
+    <div class="contact-info fade-in d3">
+      <div class="ci">
+        <div class="ci-icon">✉</div>
+        <span>mohammedsameh.habib@gmail.com</span>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">✆</div>
+        <span>+20 100 007 4289</span>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">⌖</div>
+        <span>Cairo, Egypt</span>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">↗</div>
+        <a href="https://linkedin.com/in/mohammedsamehhabib" target="_blank" rel="noopener">linkedin.com/in/mohammedsamehhabib</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <div class="f-name">Mohammed Sameh <em>Habib</em></div>
+  <div class="f-copy">&copy; 2025 &nbsp;·&nbsp; Operations Manager &nbsp;·&nbsp; Cairo, Egypt</div>
+</footer>
+
+<script>
+/* ── Nav drawer ── */
+function toggleDrawer(){
+  var d=document.getElementById('drawer'),b=document.getElementById('burger');
+  d.classList.toggle('open');b.classList.toggle('open');
+}
+function closeDrawer(){
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('burger').classList.remove('open');
+}
+
+/* ── Nav scroll + active ── */
+var navEl=document.getElementById('nav');
+var secIds=['about','experience','skills','education','contact'];
+
+window.addEventListener('scroll',function(){
+  var sy=window.scrollY;
+  navEl.classList.toggle('scrolled',sy>60);
+  if(sy>10) document.getElementById('drawer').classList.remove('open');
+
+  // active link
+  var cur='';
+  secIds.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&sy>=el.offsetTop-120) cur=id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.classList.toggle('active',a.getAttribute('data-sec')===cur);
+  });
+},{passive:true});
+
+/* ── Smooth scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=this.getAttribute('href');
+    if(id==='#') return;
+    e.preventDefault();
+    var el=document.querySelector(id);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});closeDrawer();}
+  });
+});
+
+/* ── Intersection Observer ── */
+var triggered=new Set();
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting) return;
+    var el=e.target;
+    el.classList.add('visible');
+    // counters inside metric items
+    el.querySelectorAll('.counter').forEach(function(c){
+      if(!triggered.has(c)){triggered.add(c);animateCount(c);}
+    });
+    io.unobserve(el);
+  });
+},{threshold:0.14});
+
+document.querySelectorAll('.fade-in,.tl-item').forEach(function(el){io.observe(el);});
+
+/* ── Counter animation ── */
+function animateCount(el){
+  var target=parseInt(el.getAttribute('data-target'),10);
+  var dur=2000,start=null;
+  function tick(ts){
+    if(!start) start=ts;
+    var p=Math.min((ts-start)/dur,1);
+    var e=1-Math.pow(1-p,3); // ease-out-cubic
+    el.textContent=Math.round(e*target).toLocaleString();
+    if(p<1) requestAnimationFrame(tick);
+    else el.textContent=target.toLocaleString();
+  }
+  requestAnimationFrame(tick);
+}
+</script>
+</body>
+</html>
